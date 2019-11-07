@@ -1,0 +1,15 @@
+# Template file for 'mimi'
+pkgname=mimi
+version=0.11
+revision=1
+short_desc="Mimi is an improved version of xdg-open"
+conflicts="xdg-utils"
+maintainer="Eddie Barraco <contact@eddiebarraco.fr>"
+license="Developer Certificate of Origin"
+homepage="https://github.com/march-linux/mimi"
+#distfiles="https://git.spwhitton.name/mailscripts/snapshot/mailscripts-${version}.tar.gz"
+checksum=2d871b9e07bda16842c536d1bad16b4e72332dbe1bec467b08f3368d98ef4ee4
+
+do_install() {
+	vbin xdg-open
+}

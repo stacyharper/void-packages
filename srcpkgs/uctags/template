@@ -1,0 +1,25 @@
+# Template file for 'uctags'
+pkgname=uctags
+version=1.0
+_commit=feffe43a4a9d339cd6701744589746e2297e4567
+revision=1
+conflicts="ctags"
+wrksrc="ctags-${_commit}"
+build_style=gnu-configure
+hostmakedepends="unzip"
+makedepends="gcc make pkgconf autoconf automake python3-docutils
+ libseccomp-devel jansson-devel libyaml-devel libxml2-devel"
+short_desc="Generates an index file of language objects found in source files"
+maintainer="Stacy Harper <contact@stacyharper.net>"
+license="GPL-3"
+homepage="https://github.com/universal-ctags/ctags"
+distfiles="https://github.com/universal-ctags/ctags/archive/${_commit}.zip"
+checksum=904b246bac469cdb993e7f5f4be8fa40294054e881344ca39456a4e342b54984
+
+pre_configure() {
+	./autogen.sh
+}
+
+do_install() {
+	make prefix=${DESTDIR}/usr bindir=${DESTDIR}/usr/bin mandir=${DESTDIR}/usr/share/man install
+}

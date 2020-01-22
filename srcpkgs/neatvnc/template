@@ -1,0 +1,17 @@
+# Template file for 'neatvnc'
+pkgname=neatvnc
+version=0.0.1
+_commit=64a205205c4a6168b7a864ab80a2d7eeb40de828
+wrksrc=$pkgname-$_commit
+revision=1
+build_style=meson
+hostmakedepends="pkg-config unzip"
+makedepends="libdrm-devel pixman-devel libluv-devel"
+depends="pixman libluv" # optional libturbojpeg
+short_desc="VNC server for wlroots based Wayland compositors"
+maintainer="Stacy Harper <contact@stacyharper.net>"
+license="ISC"
+homepage="https://github.com/any1/neatvnc"
+#distfiles="https://github.com/any1/${pkgname}/archive/${version}.tar.gz"
+distfiles="https://github.com/any1/${pkgname}/archive/${_commit}.zip"
+checksum=1e28f77b5259a0979ee5dc40d0bd38af32e50b583eb12f3f8b279be36f2fd40c

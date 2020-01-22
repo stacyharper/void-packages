@@ -1,0 +1,18 @@
+# Template file for 'wayvnc'
+pkgname=wayvnc
+version=0.0.1
+_commit=0572693f21406538978e5db4b5cac8da4e51b3fc
+wrksrc=$pkgname-$_commit
+revision=1
+build_style=meson
+hostmakedepends="pkg-config unzip"
+makedepends="wayland-devel pixman-devel libluv-devel glu-devel
+ libxkbcommon-devel neatvnc"
+depends="libwayland-egl libluv libxkbcommon neatvnc pixman" # miss OpenGL ES V2.0
+short_desc="VNC server for wlroots based Wayland compositors"
+maintainer="Stacy Harper <contact@stacyharper.net>"
+license="ISC"
+homepage="https://github.com/any1/wayvnc"
+#distfiles="https://github.com/any1/${pkgname}/archive/${version}.tar.gz"
+distfiles="https://github.com/any1/${pkgname}/archive/${_commit}.zip"
+checksum=2b6fde61203d17c7f296991b48cbdfeb504dc680bc5e7ee17769c5f886fbbc8b

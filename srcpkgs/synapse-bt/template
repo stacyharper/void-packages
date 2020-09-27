@@ -1,0 +1,15 @@
+# Template file for 'synapse-bt'
+pkgname=synapse-bt
+version=1.0
+revision=1
+build_style=cargo
+hostmakedepends="pkg-config"
+makedepends="libressl-devel"
+short_desc="A flexible and fast BitTorrent daemon"
+maintainer="Stacy Harper <contact@stacyherper.net>"
+wrksrc="synapse-${version}"
+license="ISC"
+homepage="https://github.com/Luminarys/synapse"
+distfiles="${homepage}/archive/${version}.tar.gz"
+checksum=e14573bc36e6b54c4091dc7b790775a7ffa3f433ee098984a0be6a4007c0da1f
+
